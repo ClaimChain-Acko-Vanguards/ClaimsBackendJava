@@ -13,8 +13,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping
+//@RestController
+//@RequestMapping
 public class AuthController {
 
     @Autowired

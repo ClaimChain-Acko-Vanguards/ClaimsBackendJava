@@ -1,12 +1,16 @@
 package com.acko.ClaimChain.ClaimChain.dto;
 
 import com.acko.ClaimChain.ClaimChain.utils.EncryptionDecryptionUtils;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
+import lombok.RequiredArgsConstructor;
 
 
 @Data
-
+@JsonIgnoreProperties(ignoreUnknown = true)
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class ClaimsSuperDto {
     private String ledgerId;               // Unique identifier for the ledger entry
     private String policyType;             // Type of insurance (Car, Bike, Health, etc.)
@@ -55,8 +59,7 @@ public class ClaimsSuperDto {
     private String accidentLocation;       // Location of the accident
     private String garageName;             // Name of the garage
     private double repairEstimate;         // Repair estimate in INR
-    private String drivingBehaviorData;    // Driving behavior data
-
+    private String drivingBehaviorData;
 
 
     public String getClaimantName() {

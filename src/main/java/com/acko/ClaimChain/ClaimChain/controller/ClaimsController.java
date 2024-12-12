@@ -1,6 +1,7 @@
 package com.acko.ClaimChain.ClaimChain.controller;
 
 import com.acko.ClaimChain.ClaimChain.dto.ClaimsRequestDto;
+import com.acko.ClaimChain.ClaimChain.dto.ClaimsSuperDto;
 import com.acko.ClaimChain.ClaimChain.dto.ResponseDto;
 import com.acko.ClaimChain.ClaimChain.models.Claims;
 import com.acko.ClaimChain.ClaimChain.service.ClaimsService;
@@ -37,6 +38,9 @@ public class ClaimsController {
         return claimsService.findClaimsByCriteria(claimsRequestDto);
     }
 
-
+    @PostMapping("/claims/upload")
+    public void uploadExcel(@RequestBody ClaimsSuperDto dto) throws Exception{
+        claimsService.addClaims(dto);
+    }
 
 }

@@ -3,6 +3,7 @@ package com.acko.ClaimChain.ClaimChain.service;
 import com.acko.ClaimChain.ClaimChain.dto.ClaimsRequestDto;
 import com.acko.ClaimChain.ClaimChain.dto.ClaimsSuperDto;
 import com.acko.ClaimChain.ClaimChain.dto.ResponseDto;
+import com.acko.ClaimChain.ClaimChain.mapper.ClaimsMapper;
 import com.acko.ClaimChain.ClaimChain.models.Claims;
 import com.acko.ClaimChain.ClaimChain.repository.ClaimsRepository;
 import com.acko.ClaimChain.ClaimChain.utils.ClaimSettlementUtils;
@@ -29,6 +30,7 @@ public class ClaimsService {
     private final ExcelReader excelReader;
     private final BlockChainService blockChainService;
     private final ClaimsRepository claimsRepository;
+    private final ClaimsMapper mapper;
     private final ClaimSettlementUtils claimSettlementUtils;
     @PersistenceContext
     private EntityManager entityManager;
@@ -118,5 +120,9 @@ public class ClaimsService {
     }
 
 
-
+    public void addClaims(ClaimsSuperDto dto) {
+        Claims claims =mapper.claimsSuperDtoToClaims(dto);
+        //todo: fraud score
+        claimsRepository.save(claims);
+    }
 }

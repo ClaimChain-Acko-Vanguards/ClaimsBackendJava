@@ -18,23 +18,7 @@ public class EncryptionDecryptionService {
         return EncryptionDecryptionUtils.encrypt(dto);
     }
 
-    // Decrypt the encrypted DTO
     public static String decryptDto(String encryptedDto) throws Exception {
-
-       // Class<?> dtoClass = Class.forName("");
         return EncryptionDecryptionUtils.decrypt(encryptedDto);
     }
-
-   /* public static void main(String[] args) {
-        HashMap map = new HashMap();
-        map.put("a" , "sa");
-        map.put("b" , "ba");
-        try {
-            String encryptedData = encryptDto(map);
-            System.out.printf("encrypted data " + encryptedData);
-            System.out.printf("De" + decryptDto(encryptedData));
-        }catch (Exception ex){
-            System.out.printf("aaaa" + ex.getMessage()) ;
-        }
-    }*/
 }

@@ -11,10 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class ClaimsController {
 
-    private ExcelReader excelReader;
-    @PostMapping("/claims/upload")
-    private void uploadExcel(MultipartFile file) throws Exception{
-        excelReader.readExcel(file);
-    }
+
 
 }

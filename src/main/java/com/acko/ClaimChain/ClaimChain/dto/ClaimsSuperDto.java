@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 
-public abstract class ClaimsSuperDto {
+public class ClaimsSuperDto {
     private String ledgerId;               // Unique identifier for the ledger entry
     private String policyType;             // Type of insurance (Car, Bike, Health, etc.)
     private String policyNumber;           // Unique identifier for the insurance policy
@@ -33,6 +33,29 @@ public abstract class ClaimsSuperDto {
     private String claimProcessingTime;    // Time taken to process the claim
     private String supportingDocuments;
     private String reasonForClaim;
+    private String abhaId;                     // ABHA ID (for health claims)
+    private String hospitalName;               // Name of the hospital
+    private String diagnosisOrIllness;         // Diagnosis or illness description
+    private String hospitalizationStartDate;   // Start date of hospitalization
+    private String hospitalizationEndDate;     // End date of hospitalization
+    private double totalMedicalExpenses;       // Total medical expenses in INR
+    private double preApprovedAmount;          // Pre-approved amount in INR
+    private String hospitalBills;              // Hospital bills
+    private String testReports;                // Test reports
+    private String initialAnalysis;            // Initial analysis of the case
+    private String finalAnalysis;              // Final analysis of the case
+    private boolean iotDataAvailable;
+    private String nomineeName;       // Name of the nominee
+    private double policyCoverage;
+    private String vehicleRegistrationNo;  // Vehicle registration number
+    private String vehicleType;            // Type of vehicle (Car/Bike)
+    private String vehicleMakeAndModel;    // Make and model of the vehicle
+    private int carBikeAge;                // Age of the car/bike
+    private String accidentDate;           // Date of the accident
+    private String accidentLocation;       // Location of the accident
+    private String garageName;             // Name of the garage
+    private double repairEstimate;         // Repair estimate in INR
+    private String drivingBehaviorData;    // Driving behavior data
 
 
 

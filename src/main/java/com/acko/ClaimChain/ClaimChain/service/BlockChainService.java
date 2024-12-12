@@ -5,9 +5,6 @@ import com.acko.ClaimChain.ClaimChain.dto.ClaimsSuperDto;
 import com.acko.ClaimChain.ClaimChain.enums.SearchParameters;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import java.util.ArrayList;
 import java.util.List;

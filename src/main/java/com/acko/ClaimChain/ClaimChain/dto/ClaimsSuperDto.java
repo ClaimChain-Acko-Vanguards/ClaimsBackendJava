@@ -6,6 +6,7 @@ import lombok.Data;
 
 
 @Data
+
 public abstract class ClaimsSuperDto {
     private String ledgerId;               // Unique identifier for the ledger entry
     private String policyType;             // Type of insurance (Car, Bike, Health, etc.)

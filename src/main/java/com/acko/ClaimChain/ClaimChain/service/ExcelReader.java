@@ -6,6 +6,7 @@ import com.acko.ClaimChain.ClaimChain.dto.HealthClaimsDto;
 import com.acko.ClaimChain.ClaimChain.dto.LifeClaimsDto;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.FileInputStream;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.*;
 
+@Component
 public class ExcelReader {
 
     public List<ClaimsSuperDto> readExcel(MultipartFile file) throws IOException, ReflectiveOperationException {

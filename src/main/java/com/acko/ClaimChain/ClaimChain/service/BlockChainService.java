@@ -15,33 +15,33 @@ import java.util.List;
 @AllArgsConstructor
 public class BlockChainService {
 
-    public List<ClaimsSuperDto> searchDataFromBlockChain(String input, SearchParameters type) {
-        List<ClaimsSuperDto> claimsSuperDtos = new ArrayList<>();
-        switch (type) {
-            case phone:
-               claimsSuperDtos= searchByPhone(input);
-                break;
-            case vehicleRegistrationNumber:
-               claimsSuperDtos= searchByVehicleRegistrationNumber(input);
-                break;
-            case aadharNumber:
-                claimsSuperDtos =searchByAadharNumber(input);
-                break;
-            default:
-                throw new IllegalArgumentException("Invalid search parameter type");
-        }
-        return claimsSuperDtos;
-    }
-
-    private List<ClaimsSuperDto> searchByPhone(String phone) {
-        // Implement search logic by phone
-    }
-
-    private List<ClaimsSuperDto> searchByVehicleRegistrationNumber(String vehicleRegistrationNumber) {
-        // Implement search logic by vehicle registration number
-    }
-
-    private List<ClaimsSuperDto> searchByAadharNumber(String aadharNumber) {
-        // Implement search logic by aadhar number
-    }
+//    public List<ClaimsSuperDto> searchDataFromBlockChain(String input, SearchParameters type) {
+//        List<ClaimsSuperDto> claimsSuperDtos = new ArrayList<>();
+//        switch (type) {
+//            case phone:
+//               claimsSuperDtos= searchByPhone(input);
+//                break;
+//            case vehicleRegistrationNumber:
+//               claimsSuperDtos= searchByVehicleRegistrationNumber(input);
+//                break;
+//            case aadharNumber:
+//                claimsSuperDtos =searchByAadharNumber(input);
+//                break;
+//            default:
+//                throw new IllegalArgumentException("Invalid search parameter type");
+//        }
+//        return claimsSuperDtos;
+//    }
+//
+//    private List<ClaimsSuperDto> searchByPhone(String phone) {
+//        // Implement search logic by phone
+//    }
+//
+//    private List<ClaimsSuperDto> searchByVehicleRegistrationNumber(String vehicleRegistrationNumber) {
+//        // Implement search logic by vehicle registration number
+//    }
+//
+//    private List<ClaimsSuperDto> searchByAadharNumber(String aadharNumber) {
+//        // Implement search logic by aadhar number
+//    }
 }

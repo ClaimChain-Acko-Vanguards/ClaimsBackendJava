@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class UserController {
 
-    @Autowired
+  /*  @Autowired
     private UserService userService;
 
     @PostMapping("/register")
@@ -23,13 +23,13 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(@RequestBody LoginRequest loginRequest) {
-        Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(loginRequest.getUsername(), loginRequest.getPassword());
+        //Subject subject = SecurityUtils.getSubject();
+        //UsernamePasswordToken token = new UsernamePasswordToken(loginRequest.getUsername(), loginRequest.getPassword());
         try {
-            subject.login(token);
+          //  subject.login(token);
             return "Login successful";
         } catch (Exception e) {
             return "Login failed: " + e.getMessage();
         }
-    }
+    }*/
 }

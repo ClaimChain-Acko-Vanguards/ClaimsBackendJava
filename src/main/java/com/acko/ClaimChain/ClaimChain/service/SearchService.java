@@ -11,7 +11,7 @@ public class SearchService {
     private final BlockChainService blockChainService;
 
     public ResponseDto<String> getClaimsSettlementRatioForInsurer(String insurerId) {
-        return blockChainService.getClaimsSettlementRatioForInsurer(insurerId);
+        return null ;// blockChainService.getClaimsSettlementRatioForInsurer(insurerId);
     }
 
 }

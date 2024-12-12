@@ -3,6 +3,7 @@ package com.acko.ClaimChain.ClaimChain.service;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,6 +12,7 @@ import java.util.Set;
 public class UserService {
 
     @Autowired
+    @Lazy
     private CacheManager cacheManager;
 
     public void saveUserCredentials(String username, String password) {

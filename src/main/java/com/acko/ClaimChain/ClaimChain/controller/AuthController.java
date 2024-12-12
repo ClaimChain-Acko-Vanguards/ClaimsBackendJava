@@ -57,6 +57,11 @@ public class AuthController {
     public String secureGreet() {
         return "You are authenticated!";
     }
+    // Secure API - Requires authentication
+    @GetMapping("/public/greet")
+    public String publicgreet() {
+        return "You are authenticated!";
+    }
 
     // Custom Login API (for REST or manual control) - Optional
     @PostMapping("/login")
